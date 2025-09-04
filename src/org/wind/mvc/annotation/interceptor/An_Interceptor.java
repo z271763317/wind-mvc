@@ -14,8 +14,11 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface An_Interceptor {
 
-	String name() default "";		//名称
-	String[] value();		//拦截的URL（可拦截多个）
-	int order() default 1;		//顺序（多个拦截器的执行顺序，若顺序相同，则按照扫描到的顺序执行）
+	/**名称**/
+	String name() default "";
+	/**拦截的URL（可拦截多个）**/
+	String[] value();		
+	/**顺序（多个拦截器的执行顺序，若顺序相同，则按照扫描到的顺序执行）**/
+	int order() default 1;		
 	
 }

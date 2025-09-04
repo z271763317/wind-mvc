@@ -7,14 +7,16 @@ package org.wind.mvc.result;
  */
 public class Result {
 	
-	private Object methodResult;		//方法返回对象
+	/**方法返回对象**/
+	private Object methodResult;
 	/**
 	 * 返回的路径（一般是本项目的视图相对路径，会加上配置的前缀和后缀）。有以下几种情况将做不同的处理（不会加上前缀和后缀）。<br/>
 	 * 前缀为“/”:——转发到其他的URL控制器，或其他路径下的视图页面<br/>
 	 * 前缀为“redirect:”——重定向到其他的URL。可以是本项目的相对路径，也可以是全路径，如：redirect:/test/kzq2、redirect:http://www.tcin.cn/<br/>
 	 */
 	private String url;
-	private String data;		//响应数据（如：html，json格式等）
+	/**响应数据（如：html，json格式等）**/
+	private String data;
 
 	public Result() {
 		

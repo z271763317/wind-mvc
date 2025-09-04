@@ -14,11 +14,17 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface An_Controller {
 
-	String name() default "";		//名称
-	String value();		//请求URL的前缀（主目录，如：/test、/test/wind/等）
-	String viewPrefix() default "";		//返回视图（页面）相对路径的前缀（默认：取value()的值）,完整的相对路径需要拼上后缀，也就是注解当前控制器类的方法返回的字符串值
-	boolean isInherit() default true;		//是否继承父类（含深层次父类）的该注解的信息（如：value()、viewPrefix()等）
-	boolean isScan() default true;		//是否允许被扫描处理
-	Class<?> bind() default Object.class;		//绑定一个Class（可做扩展用）
+	/**名称**/
+	String name() default "";	
+	/**请求URL的前缀（主目录，如：/test、/test/wind/等）**/
+	String value();
+	/**返回视图（页面）相对路径的前缀（默认：取value()的值）,完整的相对路径需要拼上后缀，也就是注解当前控制器类的方法返回的字符串值**/
+	String viewPrefix() default "";		
+	/**是否继承父类（含深层次父类）的该注解的信息（如：value()、viewPrefix()等）**/
+	boolean isInherit() default true;	
+	/**是否允许被扫描处理**/
+	boolean isScan() default true;	
+	/**绑定一个Class（可做扩展用）**/
+	Class<?> bind() default Object.class;
 	
 }
