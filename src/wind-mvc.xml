@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wind-mvc url="http://www.tcin.cn">
+	<!-- 扫描器（指定目录，扫描改下所有深层次的文件） -->
+	<scan>
+		<!-- 控制器（包目录。如：org.wind.mvc.action） -->
+		<controller>org.wind.api.back.action</controller>
+		<!-- 拦截器（包目录。如：org.wind.mvc.interceptor） -->
+		<interceptor>org.wind.api.back.action.interceptor</interceptor>
+	</scan>
+	<!-- 资源 -->
+	<resource>
+		<!-- 视图（完整的视图路径会拼上前缀+后缀，如prefix为【/view】、suffix为【.html】，某控制器方法返回值为【user/index】，则完整路径为：/view/user/index.html） -->
+		<!-- 另外，如果有【redirect:】和【forward:】开头的返回路径，则该配置不做处理， -->
+		<view>
+			<!-- 路径前缀 -->
+			<prefix>/view</prefix>
+			<!-- 路径后缀（若方法返回的路径有【.xxx】等的后缀，则不会加入该后缀） -->
+			<suffix></suffix>
+		</view>
+	</resource>
+	
+</wind-mvc>
